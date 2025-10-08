@@ -100,6 +100,12 @@ nav {
             outline: none;
         }
     }
+    div{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+   
 }
 
 /* Botones del Header */
@@ -216,6 +222,10 @@ form button[type="submit"]:focus {
     outline-offset: 2px;
 }
 
+h2 {
+    margin-bottom: 20px;
+}
+
 /* Features Section */
 main>section:nth-child(2) {
     padding-inline: 1rem;
@@ -279,11 +289,13 @@ footer {
 }
 
 article {
-    background-color: var(--card-bg);
-    padding: 2rem;
-    margin-bottom: 16px;
-    border-radius: 0.5rem;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border);
+    margin-inline: auto;
+    text-align: left;
+    padding: 1rem;
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
 
     svg {
         color: var(--primary-light);
@@ -302,20 +314,68 @@ article {
         font-weight: 500;
     }
 
-   #paginacion{display: flex;
-    
-        justify-content: center;
-        background-color: #334155;
-        transform: translateY(-4px);
-        transition: all 0.3s ease;
-        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);nav{
-            li{
-                ul{
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
+
+    div {
+
+        display: grip;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 1rem;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-family: inherit;
+            font-size: 1rem;
+            white-space: nowrap;
         }
     }
-    
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 3px;
+        margin: 30px auto;
+        ;
+    }
+
+    .pagination a:hover,
+    .pagination a:focus {
+        background-color: var(--primary-light);
+        height: 30px;
+        width: 30px;
+        color: var(--text-primary);
+        transition: 0.5s ease;
+        border-radius: 4px;
+        background-position: center;
+        padding: 1px;
+    }
+
+    .pagination a {
+        height: 30px;
+        width: 30px;
+        color: var(--text-secondary);
+        border-radius: 4px;
+        padding: 1px;
+        text-align: center;
+    }
+
+
+
 }
